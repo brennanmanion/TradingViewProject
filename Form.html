@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap and AJAX scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Reference to JavaScript form handler. -->
+  <script type="text/javascript" src="formHandler.js"></script>
+
+  <title>Manage your email preferences</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Manage your email subscriptions</h1>
+    <h2 class="mt-3">Contact information</h2>
+    <form>
+
+      <div class="form-row mt-3">
+        <div class="form-group col-md-6">
+          <label for="email" class="font-weight-bold">Email address</label>
+          <input type="email" class="form-control-plaintext" id="email" readonly>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email" class="font-weight-bold">ID</label>
+          <input type="email" class="form-control-plaintext" id="endpointId" readonly>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName" class="font-weight-bold">First name</label>
+          <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName" class="font-weight-bold">Last name</label>
+          <input type="text" class="form-control" id="lastName">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-12">
+          <p class="font-weight-bold mt-3">Subscriptions</p>
+        </div>
+      </div>
+
+      <!-- Change topic names here, if necessary -->
+      <div class="form-row">
+        <div class="col-md-6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="topic1In">
+            <label class="custom-control-label font-weight-bold" for="topic1In">Special offers</label>
+            <p>Get exclusive offers available only to subscribers.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="topic2In">
+            <label class="custom-control-label font-weight-bold" for="topic2In">Coming soon</label>
+            <p>Learn about our newest products before anyone else!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row mt-3">
+        <div class="col-md-6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="topic3In">
+            <label class="custom-control-label font-weight-bold" for="topic3In">New products</label>
+            <p>Get the inside scoop on products that haven't been released yet.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="topic4In">
+            <label class="custom-control-label font-weight-bold" for="topic4In">Deal of the Day</label>
+            <p>Get special deals in your inbox every day!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="form-response"></div>
+
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <button type="submit" id="submit" class="btn btn-primary">Update preferences</button>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-link" id="unsubAll">Unsubscribe from all email communications</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row mt-3">
+      <div class="col-md-12 text-center">
+        <small class="text-muted">Copyright © 2019, ExampleCorp or its affiliates.</small>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
